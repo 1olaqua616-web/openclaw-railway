@@ -30,6 +30,7 @@ ENV OPENCLAW_PREFER_PNPM=1
 RUN pnpm ui:build
 
 ENV NODE_ENV=production
+ENV OPENCLAW_CONFIG_PATH=/app/openclaw.json
 
 # Allow non-root user to write temp files during runtime/tests.
 RUN chown -R node:node /app
